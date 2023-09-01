@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { links } from "@/lib/data";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -12,6 +14,28 @@ const Header = () => {
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
+      <nav className="flex fixed top-[0.15rem] left-1/2 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
+        <ul
+          className="flex justify-center w-[22rem] items-center flex-wrap gap-y-1 text-[0.9rem] 
+        font-medium text-gray-500 sm:flex-nowrap sm:w-[initial] sm:gap-5"
+        >
+          {links.map((link) => (
+            <motion.li
+              key={link.hash}
+              className="h-3/4 flex justify-center items-center"
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+            >
+              <Link
+                href={link.hash}
+                className="flex w-full justify-center items-center px-3 py-3 hover:text-gray-900 transition"
+              >
+                {link.name}
+              </Link>
+            </motion.li>
+          ))}
+        </ul>
+      </nav>
     </header>
   );
 };
