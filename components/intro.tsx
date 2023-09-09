@@ -47,26 +47,39 @@ const Intro = () => {
       >
         <Link
           href="#contact"
-          className="bg-gray-900 text-white px-7 py-3 rounded-full flex gap-2 items-center"
+          className="bg-gray-900 text-white px-7 py-3 rounded-full flex gap-2 
+          items-center outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950
+          active:scale-105 transition group
+          "
         >
           Contact me here
-          <BsArrowRight />
+          <BsArrowRight className="group-hover:translate-x-1 transition" />
         </Link>
+
         <a
-          href=""
-          className="bg-white px-7 py-3 rounded-full flex items-center"
+          href="/CV.pdf"
+          download
+          className="group bg-white px-7 py-3 rounded-full flex items-center 
+          outline-none focus:scale-110 hover:scale-110
+          active:scale-105 transition border border-black/10
+          "
         >
-          Download CV <HiDownload />
+          Download CV <HiDownload className="group-hover:translate-y-1" />
         </a>
+
         <a
           href=""
-          className="bg-white p-4 rounded-full flex items-center gap-2"
+          className="bg-white p-4 rounded-full flex items-center gap-2 first-letter 
+          focus:scale-110 hover:scale-110
+          active:scale-105 transition border border-black/10"
         >
           <BsLinkedin />
         </a>
         <a
           href=""
-          className="bg-white p-4 rounded-full flex items-center gap-2"
+          className="bg-white p-4 rounded-full flex items-center gap-2 first-letter 
+          focus:scale-110 hover:scale-110
+          active:scale-105 transition border border-black/10"
         >
           <FaGithubSquare />
         </a>
