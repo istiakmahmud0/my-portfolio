@@ -55,7 +55,6 @@ const Intro = () => {
           Contact me here
           <BsArrowRight className="group-hover:translate-x-1 transition" />
         </Link>
-
         <a
           href="/CV.pdf"
           download
@@ -66,7 +65,6 @@ const Intro = () => {
         >
           Download CV <HiDownload className="group-hover:translate-y-1" />
         </a>
-
         <a
           href=""
           className="bg-white p-4 rounded-full flex items-center gap-2 first-letter 
@@ -83,6 +81,7 @@ const Intro = () => {
         >
           <FaGithubSquare />
         </a>
+        l
       </motion.div>
     </section>
   );
