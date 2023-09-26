@@ -24,15 +24,29 @@ type projectDataProps = (typeof projectsData)[number];
 
 const Project = ({ title, description, tags, imageUrl }: projectDataProps) => {
   return (
-    <section>
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <ul>
-        {tags.map((tag, index) => (
-          <li key={index}>{tag}</li>
-        ))}
-      </ul>
-      <Image src={imageUrl} width={`200`} height={`200`} alt="" />
+    <section className="bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden sm:pr-8 relative">
+      <div>
+        <h3 className="text-2xl font-semibold">{title}</h3>
+        <p className="mt-2 leading-relaxed text-gray-700">{description}</p>
+        <ul className="flex gap-2 mt-4 flex-wrap">
+          {tags.map((tag, index) => (
+            <li
+              key={index}
+              className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase text-white tracking-wider rounded-full"
+            >
+              {tag}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <Image
+        src={imageUrl}
+        width={`200`}
+        height={`200`}
+        alt="Project"
+        quality={95}
+        className="absolute -right-40 top-8"
+      />
     </section>
   );
 };
