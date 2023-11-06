@@ -1,10 +1,11 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
 
 const Header = () => {
+  const [activeSection, setActiveSection] = useState("Home");
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -22,15 +23,21 @@ const Header = () => {
           {links.map((link) => (
             <motion.li
               key={link.hash}
-              className="h-3/4 flex justify-center items-center"
+              className="h-3/4 flex justify-center items-center relative"
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
               <Link
                 href={link.hash}
-                className="flex w-full justify-center items-center px-3 py-3 hover:text-gray-900 transition"
+                className={`flex w-full justify-center items-center px-3 py-3 hover:text-gray-900 transition ${
+                  activeSection == link.name ? "text-gray-900" : ""
+                }`}
+                onClick={() => setActiveSection(link.name)}
               >
                 {link.name}
+                {link.name === activeSection && (
+                  <span className="bg-gray-100 rounded-full inset-0 absolute -z-10"></span>
+                )}
               </Link>
             </motion.li>
           ))}
