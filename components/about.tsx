@@ -32,7 +32,7 @@ const About = () => {
       id="about"
     >
       <SectionHeading>About Me</SectionHeading>
-      <p className="mb-3">
+      {/* <p className="mb-3">
         After graduating with a degree in{" "}
         <span className="font-medium">Accounting</span>, I decided to pursue my
         passion for programming. I enrolled in a coding bootcamp and learned{" "}
@@ -48,6 +48,19 @@ const About = () => {
         learn new technologies. I am currently looking for a{" "}
         <span className="font-medium">full-time position</span> as a software
         developer.
+      </p> */}
+      <p className="mb-3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+        provident alias incidunt voluptates iure, aliquam earum exercitationem
+        doloremque obcaecati quod placeat eligendi commodi rem qui quia nisi
+        corrupti eos? Vel tenetur neque, perferendis ullam assumenda libero
+        laboriosam nam, facere eius recusandae vitae sequi minus quod. Quod,
+        quos quas fugiat, consequatur dicta incidunt reprehenderit corrupti ea
+        vel adipisci nihil aspernatur minus hic totam ipsum similique ex
+        consequuntur magnam id facere doloribus nobis consectetur. Fuga
+        provident nemo quidem quam perferendis iure ducimus ullam, fugit, nobis
+        dolorum beatae, quod voluptatem. Similique hic harum expedita reiciendis
+        sapiente aliquam, delectus repellat tempora tempore. Nostrum, non.
       </p>
 
       <p>

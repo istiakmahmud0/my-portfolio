@@ -31,7 +31,8 @@ const Intro = () => {
           animate={{ opacity: 1, scale: 1 }}
         >
           <Image
-            src="/my-pic.jpg"
+            // src="/my-pic.jpg"
+            src="/rmtdev.png"
             height="192"
             width="192"
             alt=""
@@ -41,7 +42,7 @@ const Intro = () => {
           />
         </motion.div>
       </div>
-      <motion.h1
+      {/* <motion.h1
         className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -49,6 +50,17 @@ const Intro = () => {
         <span className="font-bold">Hello, I'm Mahmud.</span> I'm a{" "}
         <span className="font-bold">full-stack developer</span> with{" "}
         <span className="font-bold">4 years</span> of experience. I enjoy
+        building <span className="italic">sites & apps</span>. My focus is{" "}
+        <span className="underline">React (Next.js)</span>.
+      </motion.h1> */}
+      <motion.h1
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <span className="font-bold">Hello, I'm Lorem.</span> I'm a{" "}
+        <span className="font-bold">full-stack developer</span> with{" "}
+        <span className="font-bold"> years</span> of experience. I enjoy
         building <span className="italic">sites & apps</span>. My focus is{" "}
         <span className="underline">React (Next.js)</span>.
       </motion.h1>
