@@ -8,17 +8,20 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useActiveSectionContext } from "./active-section-context";
 import { useInView } from "react-intersection-observer";
+import { ueeSectionInView } from "@/lib/hooks";
 
 const Intro = () => {
-  const { ref, inView, entry } = useInView({
-    threshold: 0.5,
-  });
-  const { setActiveSection } = useActiveSectionContext();
-  useEffect(() => {
-    if (inView) {
-      setActiveSection("Home");
-    }
-  }, [inView, setActiveSection]);
+  // const { ref, inView, entry } = useInView({
+  //   threshold: 0.5,
+  // });
+  // const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+  // useEffect(() => {
+  //   if (inView && Date.now() - timeOfLastClick > 1000) {
+  //     setActiveSection("Home");
+  //   }
+  // }, [inView, setActiveSection, timeOfLastClick]);
+
+  const { ref } = ueeSectionInView("Home", 0.5);
   return (
     <section
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"

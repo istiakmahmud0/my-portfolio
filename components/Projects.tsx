@@ -5,17 +5,19 @@ import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "./active-section-context";
+import { ueeSectionInView } from "@/lib/hooks";
 
 const Projects = () => {
-  const { ref, inView, entry } = useInView({
-    threshold: 0.5,
-  });
-  const { setActiveSection } = useActiveSectionContext();
-  useEffect(() => {
-    if (inView) {
-      setActiveSection("Projects");
-    }
-  }, [inView, setActiveSection]);
+  // const { ref, inView, entry } = useInView({
+  //   threshold: 0.5,
+  // });
+  // const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+  // useEffect(() => {
+  //   if (inView && Date.now() - timeOfLastClick > 1000) {
+  //     setActiveSection("Projects");
+  //   }
+  // }, [inView, setActiveSection, timeOfLastClick]);
+  const { ref } = ueeSectionInView("Projects", 0.5);
   return (
     <section id="projects" className="scroll-mt-28" ref={ref}>
       <SectionHeading>My Projects</SectionHeading>
