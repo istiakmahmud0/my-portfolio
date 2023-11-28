@@ -22,11 +22,7 @@ const Skills = () => {
     }),
   };
   return (
-    <section
-      id="skills"
-      className="mb-28 max-w-[28rem] scroll-mt-[-48rem]"
-      ref={ref}
-    >
+    <section id="skills" className="mb-28 max-w-[45rem]" ref={ref}>
       <SectionHeading>My Skills</SectionHeading>
       <ul className="flex justify-center gap-2 text-lg text-gray-800 flex-wrap">
         {skillsData.map((skill, index) => (
