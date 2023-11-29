@@ -10,7 +10,7 @@ import { experiencesData } from "@/lib/data";
 import { ueeSectionInView } from "@/lib/hooks";
 
 const Experience = () => {
-  const { ref } = ueeSectionInView("Skills", 0.75);
+  const { ref } = ueeSectionInView("Experience", 0.75);
   //   console.log("ref", ref);
 
   return (
