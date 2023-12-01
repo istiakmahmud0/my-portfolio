@@ -95,6 +95,7 @@ export const skillsData = [
   "Tailwind",
   "Express",
   "PostgreSQL",
+  "WordPress",
   "Php",
   "sql",
   "Framer Motion",
