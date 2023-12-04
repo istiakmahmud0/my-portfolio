@@ -20,7 +20,7 @@ const Header = () => {
       ></motion.div>
       <nav className="flex fixed top-[0.15rem] left-1/2 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
         <ul
-          className="flex justify-center w-[22rem] items-center flex-wrap gap-y-1 text-[0.9rem] 
+          className="flex justify-center w-[25rem] items-center flex-wrap gap-y-1 text-[0.9rem] 
         font-medium text-gray-500 sm:flex-nowrap sm:w-[initial] sm:gap-5"
         >
           {links.map((link) => (
